@@ -6,7 +6,7 @@ const apiRoutes=require('./routes/index');
 const db=require('./models/index');
 
 const setupAndStartServer= () => {
-    app.use(bodyParser);
+    app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
     app.use('/api', apiRoutes);
 
